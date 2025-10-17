@@ -17,7 +17,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -166,7 +166,7 @@ form button:hover {
 .preview_frame {
   margin-top: 2vw;
   padding: 2vw;
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   text-align: center;
   width: 40vw;
@@ -185,7 +185,7 @@ form button:hover {
 .response_Frame {
   margin-top: 2vw;
   padding: 2vw;
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   text-align: center;
   width: 80%;
@@ -193,4 +193,151 @@ form button:hover {
   flex-direction: column;
   align-items: center;
   gap: 1vw;
+}
+
+.music_list_frame {
+  min-height: 10vh;
+  width: 100%;
+  background-color: rgb(40, 41, 41);
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  padding: 1vw;
+  gap: 1vw;
+
+
+}
+
+.music_list_frame_type{
+  height: 100%;
+  width: 48%;
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+
+.music_list_frame_appose{
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.music_info_frame {
+  min-height: 20vh;
+  width: 100%;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5vw;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music_info_frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.music_image_frame {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_cont {
+  height: 7.5vw;
+  width: 7.5vw;
+  background: radial-gradient(circle at center, #ff4d4d, #8b0000);
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  overflow: hidden;
+}
+
+.image_cont img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.music_detail_frame {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5vw;
+}
+
+.music_title_frame {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.music_title_frame .title_ {
+  font-size: 1.8vw;
+  font-weight: bold;
+  letter-spacing: 0.05vw;
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin-bottom: 0.3vh;
+}
+
+.lang {
+  font-size: 1vw;
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
+  color: #bbbbbb;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.application_list {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5vw;
+  padding: 0 1vw;
+  align-items: center;
+}
+
+.yt_img {
+  height: 3vw;
+  width: 3vw;
+  background: radial-gradient(circle at center, #2d2d2d, #404040);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.yt_img a{
+  height: 100%;
+  width: 100%;
+}
+
+.yt_img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.yt_img:hover {
+  box-shadow: 0 0 10px #2a5298, 0 0 20px #1e3c72;
 }

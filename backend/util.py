@@ -75,6 +75,9 @@ def get_cropped_image_if_2_eyes(image_path=None, image_base64_data=None):
     print("data:url:-",image_path)
     img = cv2.imread(image_path) if image_path else get_cv2_image_from_base64_string(image_base64_data)
     if img is None:
+        
+        
+        
         print("Error loading image.")
         return []
 
