@@ -259,6 +259,7 @@ function Predict_expression() {
         <div className="logo"> AI ML </div>
         <ul className="nav-links">
           <li><a href="/">Home</a></li>
+          <li><a href="/Realtime_predict">Realtime Prediction</a></li>
         </ul>
       </nav>
 

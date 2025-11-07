@@ -53,13 +53,7 @@ _face_cascade = cv2.CascadeClassifier(_cascade_path)
 
 @app.route('/predict_realtime', methods=['POST'])
 def predict_realtime():
-    """
-    Accepts JSON { "dataURL": "<base64 data url>" } (one camera frame per request).
-    Detects first face, crops it, sends cropped face to util.classify_image and returns:
-      { "prediction": <result from util>, "bbox": [x,y,w,h], "face": "<dataURL cropped>" }
-    If no face is found it will fall back to classifying the full frame.
-    The frontend can call this endpoint repeatedly to achieve realtime behavior.
-    """
+
     data = request.get_json()
     image_data_url = data.get('dataURL')
     if not image_data_url:

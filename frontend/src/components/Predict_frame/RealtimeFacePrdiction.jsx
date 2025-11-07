@@ -8,6 +8,7 @@ export default function RealtimeFacePrdiction() {
   const overlayRef = useRef(null);
   const captureCanvasRef = useRef(null);
   const intervalRef = useRef(null);
+  const [predictedEmotion, setpredictedEmotion] = useState("")
 
   const [running, setRunning] = useState(false);
   const [prediction, setPrediction] = useState(null);
@@ -145,38 +146,43 @@ export default function RealtimeFacePrdiction() {
         <div className="logo"> AI ML </div>
         <ul className="nav-links">
           <li><a href="/">Home</a></li>
+          <li><a href="/predict_expression">Prediction</a></li>
         </ul>
       </nav>
-      
-      <div className="video-panel">
-        <div className="video-wrap">
-          <video ref={videoRef} className="camera-video" autoPlay muted playsInline />
-          <canvas ref={overlayRef} className="overlay-canvas" />
-        </div>
-        <div className="controls">
-          <button className="btn" onClick={() => startRealtime(350)} disabled={running}>
-            Start
-          </button>
-          <button className="btn btn-stop" onClick={stopRealtime} disabled={!running}>
-            Stop
-          </button>
-          <div className="meta">FPS ~ {fps} · Sending every 350ms</div>
-        </div>
-      </div>
 
-      <div className="info-panel">
-        <h3>Prediction</h3>
-        <div className="prediction-box">
-          {prediction ? (
-            <pre className="prediction-text">{typeof prediction === "object" ? JSON.stringify(prediction, null, 2) : prediction}</pre>
-          ) : (
-            <div className="placeholder">No prediction yet</div>
-          )}
-          <div className="thumb-area">
-            {faceThumb ? <img src={faceThumb} alt="face-thumb" /> : <div className="placeholder">No face</div>}
+      <div className="realtimeFrame">
+
+        <div className="video-panel">
+          <div className="video-wrap">
+            <video ref={videoRef} className="camera-video" autoPlay muted playsInline />
+            <canvas ref={overlayRef} className="overlay-canvas" />
+          </div>
+          <div className="controls">
+            <button className="btn" onClick={() => startRealtime(350)} disabled={running}>
+              Start
+            </button>
+            <button className="btn btn-stop" onClick={stopRealtime} disabled={!running}>
+              Stop
+            </button>
+            <div className="meta">FPS ~ {fps} · Sending every 350ms</div>
+          </div>
+        </div>
+
+        <div className="info-panel">
+          <h3>Prediction</h3>
+          <div className="prediction-box">
+            {prediction ? (
+              <pre className="prediction-text">{typeof prediction === "object" ? JSON.stringify(prediction, null, 2) : prediction}</pre>
+            ) : (
+              <div className="placeholder">No prediction yet</div>
+            )}
+            <div className="thumb-area">
+              {faceThumb ? <img src={faceThumb} alt="face-thumb" /> : <div className="placeholder">No face</div>}
+            </div>
           </div>
         </div>
       </div>
+
 
       {/* hidden canvas used to capture frames */}
       <canvas ref={captureCanvasRef} style={{ display: "none" }} />

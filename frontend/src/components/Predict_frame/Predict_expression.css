@@ -30,6 +30,7 @@ body {
   list-style: none;
   display: flex;
   gap: 2vw;
+
 }
 
 .nav-links li {
@@ -37,10 +38,15 @@ body {
   font-size: 1.2vw;
   cursor: pointer;
   transition: color 0.3s ease;
+
 }
 
 .nav-links li:hover {
   color: #ffffff;
+}
+.nav-links a{
+  text-decoration: none;
+  color: white;
 }
 
 .quote-btn {
