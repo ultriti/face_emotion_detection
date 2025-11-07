@@ -1,11 +1,12 @@
-.homepage {
+.home-page {
   min-height: 100vh;
   background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-  color: white;
+  color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
   overflow-x: hidden;
 }
 
+/* Navigation */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -17,30 +18,31 @@
   z-index: 100;
 }
 
-.logo {
+.brand-logo {
   font-size: 2vw;
   font-weight: bold;
   color: #ffffff;
 }
 
-.nav-links {
+.nav-menu {
   list-style: none;
   display: flex;
   gap: 2vw;
 }
 
-.nav-links li {
+.nav-menu li {
   font-size: 1.2vw;
   cursor: pointer;
   color: #cccccc;
   transition: color 0.3s ease;
 }
 
-.nav-links li:hover {
+.nav-menu li:hover {
   color: #ffffff;
 }
 
-.hero {
+/* Hero Section */
+.hero-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,26 +54,27 @@
   max-width: 800px;
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 3vw;
   margin-bottom: 1vw;
   animation: fadeIn 1s ease-in-out;
 }
 
-.hero h2 {
+.hero-content h2 {
   font-size: 2vw;
   margin-bottom: 1vw;
   animation: slideUp 1s ease-in-out;
 }
 
-.hero p {
+.hero-content p {
   font-size: 1.2vw;
   margin-bottom: 2vw;
   line-height: 1.6;
   animation: fadeIn 2s ease-in-out;
 }
 
-.cta-btn {
+/* CTA Button */
+.cta-button {
   background-color: #ff4d4d;
   border: none;
   padding: 1vw 2vw;
@@ -83,19 +86,31 @@
   transition: background-color 0.3s ease;
 }
 
-.cta-btn:hover {
+.cta-button:hover {
   background-color: #e63946;
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-in {
